@@ -1,0 +1,31 @@
+<h1>Add a new category</h1>
+<form action="/category" method="POST">
+    <div>
+        <label for="name">Category Name: </label>
+        <input type="text" name="name">
+    </div>
+    <div>
+        <label for="default_price">Rental Price(optional): </label>
+        <input type="text" name="default_price">
+    </div>
+    <div>
+        <button type="submit">Add Category</button>
+    </div>
+</form>
+
+<h1>Movie Categories</h1>
+<table>
+    <thead>
+        <th>Catagory</th>
+        <th>Price</th>
+    </thead>
+
+    <tbody>
+        {{#each category}}
+        <tr>
+            <td>{{name}}</td>
+            <td>{{default_price}}</td>
+        </tr>
+        {{/each}}
+    </tbody>
+</table>
